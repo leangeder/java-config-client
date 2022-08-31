@@ -50,7 +50,7 @@ spec:
             fieldRef:
               apiVersion: v1
               fieldPath: status.hostIP
-        - name: SPRING_PROFILE
+        - name: SPRING_PROFILES_ACTIVE
           valueFrom:
             fieldRef:
               fieldPath: metadata.annotations['spring-profile']
@@ -73,8 +73,8 @@ spec:
         ports:
         - name: http-service
           containerPort: 8080
-        # - name: http-metrics
-        #   containerPort: 9090
+        # # - name: http-metrics
+        # #   containerPort: 9090
         # readinessProbe:
         #   httpGet:
         #     path: /actuator/health/readiness

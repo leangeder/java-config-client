@@ -2,19 +2,20 @@
 apiVersion: skaffold/v2beta29
 kind: Config
 requires:
-# - configs:
-#   - common
-#   - mysql
-#   - rabbitmq
-#   path: /Users/gregorybulgare/Works/devstack/
-- git: 
-    repo: git@github.com:leangeder/java-config-server.git
-    path: skaffold.yaml
-    ref: main
-    sync: true
-  activeProfiles:
-  - name: default
-    activatedBy: [dev]
+# # - configs:
+# #   - common
+# #   - mysql
+# #   - rabbitmq
+# #   path: /Users/gregorybulgare/Works/devstack/
+# - git: 
+#     repo: git@github.com:leangeder/java-config-server.git
+#     path: skaffold.yaml
+#     ref: main
+#     sync: true
+#   activeProfiles:
+#   - name: default
+#     activatedBy: [dev]
+- path: ../config-server/
 build:
   artifacts:
   - image: harbor.platform.pe.core.underwriteme.co.uk/private/config-client

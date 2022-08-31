@@ -1,6 +1,5 @@
 spring:
   application:
-    # name: config-client
     name: "application_a"
   config:
     import: optional:configserver:http://config-server:8080
