@@ -7,7 +7,11 @@ requires:
 #   - mysql
 #   - rabbitmq
 #   path: /Users/gregorybulgare/Works/devstack/
-- path: ../config-server/skaffold.yaml
+- git: 
+    repo: git@github.com:leangeder/java-config-server.git
+    path: skaffold.yaml
+    ref: main
+    sync: true
   activeProfiles:
   - name: default
     activatedBy: [dev]
